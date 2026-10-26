@@ -46,6 +46,6 @@ The second supplementary video is converted from HEVC to H.264 for browser compa
 - DM Sans font: bundled locally under the SIL Open Font License, included in `assets/FONT-LICENSE.txt`.
 - Visual inspiration: [Stanford HomeBody project page](https://tml.stanford.edu/homebody/). This site uses original text, layout code, diagrams, and project media.
 - Chemistry model: [Raven](https://ravenllm.com/).
-- Robot skills: [ZiyaoG/piper_llm_skills](https://github.com/ZiyaoG/piper_llm_skills). This supplied URL did not resolve publicly during preparation; repository access/visibility may be required.
+- Robot skills: [ZiyaoG/piper_llm_skills](https://github.com/ZiyaoG/piper_llm_skills). This repository is private; its link is labeled as requiring GitHub access. Its visibility is independent of this public homepage.
 
 The framework is described as a research direction. Demonstration videos document physical operations and do not claim measured autonomous recursive improvement or scientific performance benchmarks.
