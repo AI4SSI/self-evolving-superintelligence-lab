@@ -1,0 +1,51 @@
+# Self-Evolving Superintelligence Lab
+
+Public project homepage for the Co-evolving AI Scientist research framework. Affiliations: **UIUC × CMU**. No individual author names are displayed.
+
+## Preview
+
+Requires Node.js 20 or later; no dependencies or API keys.
+
+```sh
+npm run check
+npm run build
+npm start
+```
+
+Open `http://127.0.0.1:4173/self-evolving-superintelligence-lab/`.
+
+## Publish to AI4SSI
+
+Target repository: `AI4SSI/self-evolving-superintelligence-lab`.
+Expected URL after deployment: https://ai4ssi.github.io/self-evolving-superintelligence-lab/
+
+1. Create the public repository under AI4SSI and push these source files to its `main` branch.
+2. In **Settings → Pages → Build and deployment**, select **GitHub Actions**.
+3. The included `pages.yml` workflow validates and builds the site, then deploys only `dist/`.
+
+The workflow uses the official [GitHub Pages Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). No custom domain, backend, paid service, or credentials are embedded. The build allowlist excludes research SOPs and other workspace files.
+
+## Edit the page
+
+- `index.html`: project text, affiliations, resource links, video annotations.
+- `styles.css`: original visual design and responsive layouts.
+- `app.js`: Dry/Wet/Model tabs, horizontal video rail, annotation toggles, video playback, contents navigation.
+- `assets/main-demo.mp4`: primary video at the top of the page, played at 2× speed by `app.js`; source video unchanged.
+- `assets/sub-1.mp4`, `assets/sub-2.mp4`: subsequent horizontal video section.
+- `assets/setup1.webp`, `assets/setup2.webp`: project setup photographs, with click-to-enlarge views.
+
+Annotations are accessible HTML overlays on the players and can be toggled. They are not burned into the source video files. Native video controls remain available. Videos have descriptive labels and visible captions; no speech transcript was supplied. Additional videos preload only their posters. Motion-sensitive visitors receive a paused main video and reduced decorative motion.
+
+The second supplementary video is converted from HEVC to H.264 for browser compatibility. Audio and visual content are preserved; source metadata is removed. The original input files in the parent workspace remain unchanged.
+
+## Content and assets
+
+- Research narrative and three-way co-evolution framework: project owner.
+- Videos and robotic workspace image: supplied project materials.
+- Robot/chemistry logo: existing project branding; no bird motif.
+- DM Sans font: bundled locally under the SIL Open Font License, included in `assets/FONT-LICENSE.txt`.
+- Visual inspiration: [Stanford HomeBody project page](https://tml.stanford.edu/homebody/). This site uses original text, layout code, diagrams, and project media.
+- Chemistry model: [Raven](https://ravenllm.com/).
+- Robot skills: [ZiyaoG/piper_llm_skills](https://github.com/ZiyaoG/piper_llm_skills). This supplied URL did not resolve publicly during preparation; repository access/visibility may be required.
+
+The framework is described as a research direction. Demonstration videos document physical operations and do not claim measured autonomous recursive improvement or scientific performance benchmarks.

@@ -1,0 +1,9 @@
+{
+  "name": "self-evolving-superintelligence-lab",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "UIUC × CMU project homepage: Dry, Wet, and Model co-evolution.",
+  "scripts": {"build":"node scripts/build.mjs","start":"node scripts/serve.mjs","check":"node scripts/check.mjs"},
+  "engines": {"node":">=20"}
+}
