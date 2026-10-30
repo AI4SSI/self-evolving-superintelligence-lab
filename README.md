@@ -1,6 +1,6 @@
 # Self-Evolving Superintelligence Lab
 
-Public project homepage for the Co-evolving AI Scientist research framework. Affiliations: **UIUC × CMU**. No individual author names are displayed.
+Public project homepage for the Co-evolving AI Scientist research framework. Affiliations: **UIUC × CMU × Northeastern**. No individual author names are displayed.
 
 ## Preview
 
@@ -30,17 +30,25 @@ The workflow uses the official [GitHub Pages Actions workflow](https://docs.gith
 - `index.html`: project text, affiliations, resource links, video annotations.
 - `styles.css`: original visual design and responsive layouts.
 - `app.js`: Dry/Wet/Model tabs, horizontal video rail, annotation toggles, video playback, contents navigation.
-- `assets/main-demo.mp4`: primary video at the top of the page, played at 2× speed by `app.js`; source video unchanged.
+- `assets/scientific-superintelligence-annotated.mp4`: supplied annotated film at the top of the page. It already contains a 2× edit, so the browser plays the encoded file at 1×.
 - `assets/sub-1.mp4`, `assets/sub-2.mp4`: subsequent horizontal video section.
 - `assets/setup1.webp`, `assets/setup2.webp`: project setup photographs, with click-to-enlarge views.
+- `digital-twin/`: public browser workbench integrated into the page, with the research twin’s 3D renderer and CAD-derived display models.
 
-Annotations are accessible HTML overlays on the players and can be toggled. They are not burned into the source video files. Native video controls remain available. Videos have descriptive labels and visible captions; no speech transcript was supplied. Additional videos preload only their posters. Motion-sensitive visitors receive a paused main video and reduced decorative motion.
+The main film’s captions and 2× speed marker are embedded in the supplied video. The two supporting clips have toggleable HTML annotations. Native video controls remain available. Videos have descriptive labels and visible captions; no speech transcript was supplied. Additional videos preload only their posters. Motion-sensitive visitors receive a paused main video and reduced decorative motion.
 
 The second supplementary video is converted from HEVC to H.264 for browser compatibility. Audio and visual content are preserved; source metadata is removed. The original input files in the parent workspace remain unchanged.
+
+## Digital twin workbench
+
+The embedded workbench runs directly in a visitor’s browser. Visitors can orbit and zoom the 3D bench, drag items, change their coordinates and rotation, add and remove items, adjust PiPER arm joints, preview a representative arm motion, save the layout locally, and import or export JSON. The 3D renderer and selected display models are from [self-evolving-lab-nature](https://github.com/xexlalalan/self-evolving-lab-nature), which currently requires GitHub access. Three.js r170 is bundled under its MIT license in `digital-twin/vendor/LICENSE`.
+
+The public workbench uses a browser state and a visual motion preview. It does not connect to the research repository’s local Astra harness, planner, sensors, or real arm. It must not be treated as a collision-checked robot program. These boundaries are stated on the page. The complete research control panel in the source repository needs a separately operated backend; this GitHub Pages site provides a usable digital twin for public exploration without exposing that backend.
 
 ## Content and assets
 
 - Research narrative and three-way co-evolution framework: project owner.
+- Browser twin model and renderer: selected assets from the project owner’s research repository. The default arrangement is illustrative; bench dimensions come from the source twin.
 - Videos and robotic workspace image: supplied project materials.
 - Robot/chemistry logo: existing project branding; no bird motif.
 - DM Sans font: bundled locally under the SIL Open Font License, included in `assets/FONT-LICENSE.txt`.

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <title>Digital Twin Workbench · Self-Evolving Superintelligence Lab</title>
+  <link rel="stylesheet" href="workbench.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/"}}</script>
+  <script type="module" src="twin3d.js"></script>
+  <script src="workbench.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar"><div><span class="eyebrow">DRY / DIGITAL TWIN</span><h1>Virtual laboratory</h1></div><span class="mode"><i></i> BROWSER SIMULATION</span></header>
+    <main class="workarea">
+      <section class="scene-panel" aria-label="Interactive 3D digital twin">
+        <div class="scene-toolbar"><span>UIUC BENCH · 1,220 × 610 mm</span><button id="fit-view" type="button">Fit view <span aria-hidden="true">⤢</span></button></div>
+        <div id="twin-view" role="img" aria-label="Three-dimensional laboratory workbench; drag a model to move it, or use the position controls"><div class="scene-fallback" hidden><img src="../assets/setup1.webp" alt="Robotic bench with arm and laboratory equipment"><p>3D graphics are unavailable here. You can still edit and export the layout using the controls.</p></div></div>
+        <div class="scene-hint">Drag a model to place it · Drag empty space to orbit · Scroll to zoom</div>
+      </section>
+      <aside class="inspector" aria-label="Digital twin controls">
+        <div class="panel-title"><span>BENCH OBJECTS</span><span id="object-count">3 objects</span></div>
+        <div class="object-list" id="object-list" role="group" aria-label="Select an object"></div>
+        <div class="add-row"><select id="part-type" aria-label="Equipment to add"><option value="beaker">50 mL beaker</option><option value="bunny">Weighing Bunny</option><option value="piper">PiPER arm</option></select><button id="add-item" type="button">+ Add</button></div>
+        <div class="inspector-rule"></div>
+        <div class="panel-title"><span>SELECTED OBJECT</span><span id="selected-type"></span></div>
+        <h2 id="selected-name">PiPER arm</h2>
+        <div class="coordinates"><label>X <input id="position-x" type="number" min="0" max="1220" step="1" inputmode="numeric"></label><label>Y <input id="position-y" type="number" min="0" max="610" step="1" inputmode="numeric"></label><label>Rotation <input id="position-rot" type="number" min="0" max="360" step="1" inputmode="numeric"></label></div>
+        <div class="object-actions"><button id="apply-position" type="button">Apply position</button><button id="remove-item" type="button">Remove</button></div>
+        <details id="joint-details" open><summary>Robot joints</summary><div id="joint-controls"></div></details>
+      </aside>
+    </main>
+    <footer class="tool-footer"><div class="workflow"><button id="play-motion" class="primary" type="button">▷ Play arm motion</button><button id="stop-motion" type="button" disabled>Stop</button><span>Visual pose preview</span></div><div class="file-actions"><button id="save-layout" type="button">Save in browser</button><button id="export-layout" type="button">Export JSON</button><label class="file-button" for="import-layout">Import JSON</label><input id="import-layout" type="file" accept=".json,application/json" hidden><button id="reset-layout" type="button">Reset</button></div><p id="status" role="status" aria-live="polite">Drag an object or adjust its coordinates to start.</p></footer>
+  </div>
+</body>
+</html>

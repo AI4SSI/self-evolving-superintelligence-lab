@@ -17,8 +17,9 @@ function selectSystem(tab){
 tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectSystem(tab));tab.addEventListener('keydown',event=>{let n;if(event.key==='ArrowRight')n=(i+1)%tabs.length;if(event.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(event.key==='Home')n=0;if(event.key==='End')n=tabs.length-1;if(n!==undefined){event.preventDefault();selectSystem(tabs[n]);tabs[n].focus();}});});
 document.querySelectorAll('.annotation-toggle').forEach(button=>button.addEventListener('click',()=>{const shown=button.getAttribute('aria-pressed')!=='true';button.setAttribute('aria-pressed',String(shown));button.querySelector('span').textContent=shown?'ON':'OFF';button.closest('.video-shell').classList.toggle('annotations-hidden',!shown);}));
 const mainVideo=document.querySelector('#main-video');
-mainVideo.defaultPlaybackRate=2;
-mainVideo.playbackRate=2;
+// The replacement film already contains the 2× edit and its own annotations.
+mainVideo.defaultPlaybackRate=1;
+mainVideo.playbackRate=1;
 const playButton=document.querySelector('#main-play');
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
 if(motion.matches){mainVideo.autoplay=false;mainVideo.pause();}
