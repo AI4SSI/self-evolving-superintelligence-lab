@@ -21,7 +21,8 @@ if(html.indexOf('assets/recognize_bunny-3x.mp4')<html.indexOf('assets/scientific
 if(!html.includes('assets/overview-fume-hood.png')||!html.includes('assets/render-main-final.png'))errors.push('Missing requested setup images');
 if((html.match(/<sup>†<\/sup>/g)||[]).length!==3||!html.includes('† Co-first authors'))errors.push('Missing co-first author marks');
 if(!html.includes('<p class="author-row">Mohamed Eshan · Olamide Ogunjobi · Owen Funke · Yu Liu · Yuxing Wang'))errors.push('Missing second author row');
-for(const institution of ['UIUC','CMU','Evernovum','Northeastern','NVIDIA'])if(!html.includes(institution))errors.push('Missing institution '+institution);
+for(const institution of ['UIUC','CMU','Northeastern','NVIDIA'])if(!html.includes(institution))errors.push('Missing institution '+institution);
+if(/Evernovum/i.test(html))errors.push('Removed institution remains on page');
 for(const author of ['Renjie Li','Yuanhao Zhou','Yinqi Zeng','Edward Lukhanin','Huan Liu','Carter McNear','Daniel Ceballos','Mohamed Eshan','Olamide Ogunjobi','Owen Funke','Yu Liu','Yuxing Wang','Paul Braun','Lynford Goddard'])if(!html.includes(author))errors.push('Missing author '+author);
 if(html.includes('https://github.com/AI4SSI/self-evolving-superintelligence-lab'))errors.push('Remove project repository link from the page');
 if(!html.includes('digital-twin/index.html'))errors.push('Missing digital twin module');
