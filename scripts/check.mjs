@@ -13,9 +13,13 @@ for(const m of html.matchAll(/(?:src|href|poster)="([^"]+)"/g)){
  else if(!/^https?:/.test(value)){if(value.startsWith('/'))errors.push('Root-relative URL breaks project Pages: '+value);try{await stat(root+value);}catch{errors.push('Missing asset '+value);}}
 }
 for(const m of css.matchAll(/url\(['"]?([^)'"\s]+)['"]?\)/g)){try{await stat(root+m[1]);}catch{errors.push('Missing CSS asset '+m[1]);}}
-if((html.match(/<video\b/g)||[]).length!==3)errors.push('Expected three video players');
+if((html.match(/<video\b/g)||[]).length!==4)errors.push('Expected four video players');
 if((html.match(/class="annotation-toggle"/g)||[]).length!==2)errors.push('Expected toggles on both supporting video overlays');
 if(!html.includes('Scientific Superintelligence')&&!html.includes('Scientific_Superintelligence'))errors.push('Expected annotated main video');
+if(!html.includes('assets/recognize_bunny-3x.mp4')||!html.includes('featured-film-rail'))errors.push('Missing featured recognition video rail');
+if(!html.includes('assets/overview-fume-hood.png')||!html.includes('assets/render-main-final.png'))errors.push('Missing requested setup images');
+if((html.match(/<sup>†<\/sup>/g)||[]).length!==3||!html.includes('† Co-first authors'))errors.push('Missing co-first author marks');
+if(!html.includes('<p class="author-row">Mohamed Eshan · Olamide Ogunjobi · Owen Funke · Yu Liu · Yuxing Wang'))errors.push('Missing second author row');
 for(const institution of ['UIUC','CMU','Evernovum','Northeastern','NVIDIA'])if(!html.includes(institution))errors.push('Missing institution '+institution);
 for(const author of ['Renjie Li','Yuanhao Zhou','Yinqi Zeng','Edward Lukhanin','Huan Liu','Carter McNear','Daniel Ceballos','Mohamed Eshan','Olamide Ogunjobi','Owen Funke','Yu Liu','Yuxing Wang','Paul Braun','Lynford Goddard'])if(!html.includes(author))errors.push('Missing author '+author);
 if(html.includes('https://github.com/AI4SSI/self-evolving-superintelligence-lab'))errors.push('Remove project repository link from the page');

@@ -17,7 +17,7 @@ function selectSystem(tab){
 tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectSystem(tab));tab.addEventListener('keydown',event=>{let n;if(event.key==='ArrowRight')n=(i+1)%tabs.length;if(event.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(event.key==='Home')n=0;if(event.key==='End')n=tabs.length-1;if(n!==undefined){event.preventDefault();selectSystem(tabs[n]);tabs[n].focus();}});});
 document.querySelectorAll('.annotation-toggle').forEach(button=>button.addEventListener('click',()=>{const shown=button.getAttribute('aria-pressed')!=='true';button.setAttribute('aria-pressed',String(shown));button.querySelector('span').textContent=shown?'ON':'OFF';button.closest('.video-shell').classList.toggle('annotations-hidden',!shown);}));
 const mainVideo=document.querySelector('#main-video');
-// The replacement film already contains the 2× edit and its own annotations.
+// The featured films contain their own speed edits and visual annotations.
 mainVideo.defaultPlaybackRate=1;
 mainVideo.playbackRate=1;
 const playButton=document.querySelector('#main-play');
@@ -27,6 +27,15 @@ function updatePlay(){playButton.replaceChildren(document.createTextNode(mainVid
 mainVideo.addEventListener('play',updatePlay);mainVideo.addEventListener('pause',updatePlay);updatePlay();
 playButton.addEventListener('click',()=>{if(mainVideo.paused){mainVideo.play().catch(()=>updatePlay());}else mainVideo.pause();});
 document.querySelectorAll('video').forEach(video=>video.addEventListener('play',()=>{document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});}));
+const featuredRail=document.querySelector('#featured-film-rail');
+const featuredPrev=document.querySelector('#featured-prev');
+const featuredNext=document.querySelector('#featured-next');
+const featuredDots=[...document.querySelectorAll('.featured-film-dots i')];
+function moveFeatured(direction){const card=featuredRail.querySelector('figure');featuredRail.scrollBy({left:direction*(card.offsetWidth+parseFloat(getComputedStyle(featuredRail).gap)),behavior:motion.matches?'instant':'smooth'});}
+featuredPrev.addEventListener('click',()=>moveFeatured(-1));featuredNext.addEventListener('click',()=>moveFeatured(1));
+featuredRail.addEventListener('keydown',event=>{if(event.target!==featuredRail)return;if(['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();moveFeatured(event.key==='ArrowRight'?1:-1);}});
+function updateFeatured(){const remaining=featuredRail.scrollWidth-featuredRail.clientWidth;const second=featuredRail.scrollLeft>remaining/2;featuredPrev.disabled=featuredRail.scrollLeft<8;featuredNext.disabled=featuredRail.scrollLeft>=remaining-8;featuredDots.forEach((dot,index)=>dot.classList.toggle('active',index===Number(second)));if(second&&!mainVideo.paused)mainVideo.pause();}
+featuredRail.addEventListener('scroll',updateFeatured,{passive:true});window.addEventListener('resize',updateFeatured);updateFeatured();
 const rail=document.querySelector('#film-rail');
 const prev=document.querySelector('#video-prev');
 const next=document.querySelector('#video-next');

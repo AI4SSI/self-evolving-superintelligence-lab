@@ -31,17 +31,25 @@
       <h1 id="project-title">Self-Evolving<br><span>Superintelligence Lab</span></h1>
       <p class="subtitle">A <strong>Co-evolving AI Scientist</strong> for the next generation of discovery.</p>
       <p class="affiliations"><abbr title="University of Illinois Urbana-Champaign">UIUC</abbr><span aria-hidden="true">×</span><abbr title="Carnegie Mellon University">CMU</abbr><span aria-hidden="true">×</span><abbr title="NVIDIA">NVIDIA</abbr><span aria-hidden="true">×</span><abbr title="Evernovum Inc.">Evernovum</abbr><span aria-hidden="true">×</span><abbr title="Northeastern University">Northeastern</abbr></p>
-      <div class="author-block" aria-label="Project authors"><span class="author-kicker">AUTHORS</span><p>Renjie Li · Yuanhao Zhou · Yinqi Zeng · Edward Lukhanin · Huan Liu · Carter McNear · Daniel Ceballos · Mohamed Eshan · Olamide Ogunjobi · Owen Funke · Yu Liu · Yuxing Wang · Paul Braun · Lynford Goddard</p></div>
+      <div class="author-block" aria-label="Project authors"><span class="author-kicker">AUTHORS</span><p class="author-row"><strong>Renjie Li<sup>†</sup></strong> · <strong>Yuanhao Zhou<sup>†</sup></strong> · <strong>Yinqi Zeng<sup>†</sup></strong> · Edward Lukhanin · Huan Liu · Carter McNear · Daniel Ceballos</p><p class="author-row">Mohamed Eshan · Olamide Ogunjobi · Owen Funke · Yu Liu · Yuxing Wang · Paul Braun · Lynford Goddard</p><p class="author-note">† Co-first authors</p></div>
       <p class="intro-note">Code, experiments, and models—improving together.</p>
       <div class="intro-links"><a class="pill dark" href="#framework">Explore the framework <span aria-hidden="true">↓</span></a><a class="pill" href="#demonstrations">Watch the experiments <span aria-hidden="true">↘</span></a></div>
     </section>
 
-    <figure class="main-film wide">
-      <div class="video-shell main-video">
-        <video id="main-video" controls muted autoplay loop playsinline preload="metadata" poster="assets/scientific-superintelligence-poster.jpg" aria-label="Annotated Scientific Superintelligence demonstration" aria-describedby="main-film-caption"><source src="assets/scientific-superintelligence-annotated.mp4" type="video/mp4"><p><a href="assets/scientific-superintelligence-annotated.mp4">Watch the annotated demonstration</a></p></video>
+    <section class="featured-films wide" aria-label="Featured research videos">
+      <div class="featured-film-heading"><span>FEATURED FILMS</span><div><button id="featured-prev" type="button" aria-label="Previous featured video">←</button><button id="featured-next" type="button" aria-label="Next featured video">→</button></div></div>
+      <div class="featured-film-rail" id="featured-film-rail" role="region" tabindex="0" aria-label="Featured videos, scroll horizontally">
+        <figure class="featured-film-card">
+          <div class="video-shell main-video"><video id="main-video" controls muted autoplay loop playsinline preload="metadata" poster="assets/recognize-bunny-poster.jpg" aria-label="Recognizing the Weighing Bunny across camera and digital twin views" aria-describedby="recognition-film-caption"><source src="assets/recognize_bunny-3x.mp4" type="video/mp4"><p><a href="assets/recognize_bunny-3x.mp4">Watch the Weighing Bunny recognition video</a></p></video></div>
+          <figcaption id="recognition-film-caption"><span>DIGITAL TWIN · OBJECT RECOGNITION · 3× FOOTAGE</span> Recognizing the weighing module across physical and digital views. <button class="text-button" id="main-play" type="button">Pause video <span aria-hidden="true">Ⅱ</span></button></figcaption>
+        </figure>
+        <figure class="featured-film-card">
+          <div class="video-shell main-video"><video id="overview-video" controls muted loop playsinline preload="metadata" poster="assets/scientific-superintelligence-poster.jpg" aria-label="Annotated Scientific Superintelligence demonstration" aria-describedby="overview-film-caption"><source src="assets/scientific-superintelligence-annotated.mp4" type="video/mp4"><p><a href="assets/scientific-superintelligence-annotated.mp4">Watch the annotated demonstration</a></p></video></div>
+          <figcaption id="overview-film-caption"><span>SCIENTIFIC SUPERINTELLIGENCE · ANNOTATED 2× FOOTAGE</span> Robotic synthesis and the evolving laboratory.</figcaption>
+        </figure>
       </div>
-      <figcaption id="main-film-caption"><span>SCIENTIFIC SUPERINTELLIGENCE · ANNOTATED 2× FOOTAGE</span> Robotic synthesis and the evolving laboratory. <button class="text-button" id="main-play" type="button">Pause video <span aria-hidden="true">Ⅱ</span></button></figcaption>
-    </figure>
+      <div class="featured-film-footer"><span class="featured-film-dots" aria-hidden="true"><i class="active"></i><i></i></span><span>Scroll to explore both videos →</span></div>
+    </section>
 
     <div class="reading-layout wide">
       <aside class="contents" aria-label="On this page"><p>IN THIS PROJECT</p><nav><a href="#overview">01 <span>The idea</span></a><a href="#framework">02 <span>Three evolving systems</span></a><a href="#digital-twin">03 <span>Use the digital twin</span></a><a href="#demonstrations">04 <span>Inside the wet lab</span></a><a href="#scientist">05 <span>The AI scientist</span></a><a href="#discovery">06 <span>Materials discovery</span></a><a href="#resources">07 <span>Explore more</span></a></nav><div class="contents-footer">DRY ↔ WET ↔ MODEL</div></aside>
@@ -93,10 +101,10 @@
           </div>
           <div class="rail-caption"><span><i class="rail-dot active"></i><i class="rail-dot"></i></span><p>Scroll to explore both demonstrations <span aria-hidden="true">→</span></p></div>
           <p class="figure-note">Videos document physical operations. The co-evolution architecture describes the broader research framework.</p>
-          <div class="setup-heading"><span class="role-kicker">THE EXPERIMENTAL SETUP</span><h3>A physical home for the discovery loop.</h3><p>The robotic workspace, from the benchtop to the fume hood.</p></div>
+          <div class="setup-heading"><span class="role-kicker">THE EXPERIMENTAL SETUP</span><h3>A physical home for the discovery loop.</h3><p>The physical fume hood and its rendered laboratory layout.</p></div>
           <div class="setup-gallery">
-            <figure><button class="setup-image" type="button" data-image="assets/setup1.webp" data-caption="Setup 01 · Robotic arm, dosing station, and sample holders." aria-label="Enlarge setup 1: robotic synthesis workspace"><img src="assets/setup1.webp" alt="Robotic arm beside an enclosed dosing station, sample holders, and a stir plate inside a fume hood" width="2000" height="1500" loading="lazy"><span aria-hidden="true">↗</span></button><figcaption><span>SETUP 01</span> Robotic synthesis workspace</figcaption></figure>
-            <figure><button class="setup-image" type="button" data-image="assets/setup2.webp" data-caption="Setup 02 · Wider view of the experimental workspace inside the fume hood." aria-label="Enlarge setup 2: wider fume hood view"><img src="assets/setup2.webp" alt="Wide view of the fume hood containing the robotic arm and laboratory synthesis equipment" width="2000" height="1500" loading="lazy"><span aria-hidden="true">↗</span></button><figcaption><span>SETUP 02</span> Fume hood workspace</figcaption></figure>
+            <figure><button class="setup-image" type="button" data-image="assets/overview-fume-hood.png" data-caption="Setup 01 · Fume hood overview with microscope and 3D printer insets." aria-label="Enlarge setup 1: fume hood overview"><img src="assets/overview-fume-hood.png" alt="Fume hood with robotic synthesis equipment, microscope and 3D printer insets" width="1722" height="1290" loading="lazy"><span aria-hidden="true">↗</span></button><figcaption><span>SETUP 01</span> Fume hood overview</figcaption></figure>
+            <figure><button class="setup-image" type="button" data-image="assets/render-main-final.png" data-caption="Setup 02 · Rendered virtual laboratory layout." aria-label="Enlarge setup 2: rendered laboratory layout"><img src="assets/render-main-final.png" alt="Rendered laboratory layout with fume hood, robotic arm, microscopy station, optical bench and fabrication equipment" width="3600" height="2025" loading="lazy"><span aria-hidden="true">↗</span></button><figcaption><span>SETUP 02</span> Rendered laboratory layout</figcaption></figure>
           </div>
         </section>
 
@@ -129,7 +137,7 @@
       </div>
     </div>
   </main>
-  <dialog class="image-dialog" aria-label="Experimental setup photograph"><button class="dialog-close" type="button" aria-label="Close enlarged photograph">Close ×</button><img src="assets/setup1.webp" alt=""><p></p></dialog>
+  <dialog class="image-dialog" aria-label="Experimental setup image"><button class="dialog-close" type="button" aria-label="Close enlarged image">Close ×</button><img src="assets/overview-fume-hood.png" alt=""><p></p></dialog>
   <footer class="wide"><div><strong>Self-Evolving Superintelligence Lab</strong><p>A Co-evolving AI Scientist</p></div><div class="footer-institutions">UIUC <span>×</span> CMU <span>×</span> NVIDIA <span>×</span> Evernovum <span>×</span> Northeastern</div><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
