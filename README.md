@@ -1,6 +1,6 @@
 # Self-Evolving Superintelligence Lab
 
-Public project homepage for the Co-evolving AI Scientist research framework. Affiliations: **UIUC × CMU × Northeastern**. No individual author names are displayed.
+Public project homepage for the Co-evolving AI Scientist research framework. Affiliations: **UIUC × CMU × NVIDIA × Evernovum × Northeastern**. The author list follows the order in the research manuscript.
 
 ## Preview
 

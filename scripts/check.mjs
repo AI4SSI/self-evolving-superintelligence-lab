@@ -16,7 +16,9 @@ for(const m of css.matchAll(/url\(['"]?([^)'"\s]+)['"]?\)/g)){try{await stat(roo
 if((html.match(/<video\b/g)||[]).length!==3)errors.push('Expected three video players');
 if((html.match(/class="annotation-toggle"/g)||[]).length!==2)errors.push('Expected toggles on both supporting video overlays');
 if(!html.includes('Scientific Superintelligence')&&!html.includes('Scientific_Superintelligence'))errors.push('Expected annotated main video');
-if(!html.includes('UIUC')||!html.includes('CMU')||!html.includes('Northeastern'))errors.push('Missing institution');
+for(const institution of ['UIUC','CMU','Evernovum','Northeastern','NVIDIA'])if(!html.includes(institution))errors.push('Missing institution '+institution);
+for(const author of ['Renjie Li','Yuanhao Zhou','Yinqi Zeng','Edward Lukhanin','Huan Liu','Carter McNear','Daniel Ceballos','Mohamed Eshan','Olamide Ogunjobi','Owen Funke','Yu Liu','Yuxing Wang','Paul Braun','Lynford Goddard'])if(!html.includes(author))errors.push('Missing author '+author);
+if(html.includes('https://github.com/AI4SSI/self-evolving-superintelligence-lab'))errors.push('Remove project repository link from the page');
 if(!html.includes('digital-twin/index.html'))errors.push('Missing digital twin module');
 if(/psl-uillinois|Unknown|lorem ipsum/i.test(html))errors.push('Stale hosting or placeholder content');
 if(!html.includes('https://ai4ssi.github.io/self-evolving-superintelligence-lab/'))errors.push('Missing AI4SSI canonical URL');
