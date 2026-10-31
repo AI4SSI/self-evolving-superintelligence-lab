@@ -30,8 +30,8 @@ The workflow uses the official [GitHub Pages Actions workflow](https://docs.gith
 - `index.html`: project text, affiliations, resource links, video annotations.
 - `styles.css`: original visual design and responsive layouts.
 - `app.js`: Dry/Wet/Model tabs, horizontal video rail, annotation toggles, video playback, contents navigation.
-- `assets/recognize_bunny-3x.mp4`: first featured film, converted to browser-compatible H.264 from the supplied MPEG-4 Part 2 video; the 3× edit is already encoded.
-- `assets/scientific-superintelligence-annotated.mp4`: second featured film in the horizontal rail. It already contains a 2× edit, so the browser plays the encoded file at 1×.
+- `assets/scientific-superintelligence-annotated.mp4`: first featured film in the horizontal rail. It already contains a 2× edit, so the browser plays the encoded file at 1×.
+- `assets/recognize_bunny-3x.mp4`: second featured film, converted to browser-compatible H.264 from the supplied MPEG-4 Part 2 video; the 3× edit is already encoded.
 - `assets/sub-1.mp4`, `assets/sub-2.mp4`: subsequent horizontal video section.
 - `assets/overview-fume-hood.png`, `assets/render-main-final.png`: fume hood overview and rendered lab layout in the click-to-enlarge setup gallery.
 - `digital-twin/`: public browser workbench integrated into the page, with the research twin’s 3D renderer and CAD-derived display models.

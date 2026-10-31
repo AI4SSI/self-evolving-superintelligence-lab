@@ -17,6 +17,7 @@ if((html.match(/<video\b/g)||[]).length!==4)errors.push('Expected four video pla
 if((html.match(/class="annotation-toggle"/g)||[]).length!==2)errors.push('Expected toggles on both supporting video overlays');
 if(!html.includes('Scientific Superintelligence')&&!html.includes('Scientific_Superintelligence'))errors.push('Expected annotated main video');
 if(!html.includes('assets/recognize_bunny-3x.mp4')||!html.includes('featured-film-rail'))errors.push('Missing featured recognition video rail');
+if(html.indexOf('assets/recognize_bunny-3x.mp4')<html.indexOf('assets/scientific-superintelligence-annotated.mp4'))errors.push('Recognition video must be on the right');
 if(!html.includes('assets/overview-fume-hood.png')||!html.includes('assets/render-main-final.png'))errors.push('Missing requested setup images');
 if((html.match(/<sup>†<\/sup>/g)||[]).length!==3||!html.includes('† Co-first authors'))errors.push('Missing co-first author marks');
 if(!html.includes('<p class="author-row">Mohamed Eshan · Olamide Ogunjobi · Owen Funke · Yu Liu · Yuxing Wang'))errors.push('Missing second author row');
