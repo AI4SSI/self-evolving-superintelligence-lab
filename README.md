@@ -58,3 +58,7 @@ The public workbench uses a browser state and a visual motion preview. It does n
 - Robot skills: [ZiyaoG/piper_llm_skills](https://github.com/ZiyaoG/piper_llm_skills). This repository is private; its link is labeled as requiring GitHub access. Its visibility is independent of this public homepage.
 
 The framework is described as a research direction. Demonstration videos document physical operations and do not claim measured autonomous recursive improvement or scientific performance benchmarks.
+
+### Institution marks
+
+Header logos are sourced from the official sites: [UIUC](https://cdn.brand.illinois.edu/icon.svg), [CMU](https://www.cmu.edu/) (header SVG), [NVIDIA](https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/nvidia-brochure/images/nvidia-logo-black.svg), and [Northeastern](https://www.northeastern.edu/) (header SVG, dark lettering for the white background). Marks remain the property of their respective institutions.
