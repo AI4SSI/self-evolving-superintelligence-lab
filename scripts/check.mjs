@@ -20,8 +20,8 @@ if(!html.includes('assets/recognize_bunny-3x.mp4')||!html.includes('featured-fil
 if(html.indexOf('assets/recognize_bunny-3x.mp4')<html.indexOf('assets/scientific-superintelligence-annotated.mp4'))errors.push('Recognition video must be on the right');
 if(!html.includes('assets/overview-fume-hood.png')||!html.includes('assets/render-main-final.png'))errors.push('Missing requested setup images');
 if((html.match(/<sup>†<\/sup>/g)||[]).length!==2||!html.includes('† Co-first authors'))errors.push('Missing co-first author marks');
-if(!html.includes('<p class="author-row">Mohamed Eshan · Olamide Ogunjobi · Owen Funke · Yu Liu · Yuxing Wang'))errors.push('Missing second author row');
-for(const institution of ['UIUC','CMU','Northeastern','NVIDIA'])if(!html.includes(institution))errors.push('Missing institution '+institution);
+if(!html.includes('<p class="author-row">Mohamed Eshan · Olamide Ogunjobi · Owen Funke · Yu Liu · Yuxing Wang'))errors.push('Missing second author row');for(const institution of ['UIUC','CMU','Northeastern'])if(!html.includes(institution))errors.push('Missing institution '+institution);
+if(/NVIDIA/i.test(html))errors.push('Removed institution remains on page');
 if(/Evernovum/i.test(html))errors.push('Removed institution remains on page');
 for(const author of ['Renjie Li','Yuanhao Zhou','Yinqi Zeng','Edward Lukhanin','Kevin Meyering','Huan Liu','Carter McNear','Daniel Ceballos','Mohamed Eshan','Olamide Ogunjobi','Owen Funke','Yu Liu','Yuxing Wang','Paul Braun','Lynford Goddard'])if(!html.includes(author))errors.push('Missing author '+author);
 if(html.includes('https://github.com/AI4SSI/self-evolving-superintelligence-lab'))errors.push('Remove project repository link from the page');
