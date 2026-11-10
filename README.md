@@ -61,4 +61,4 @@ The framework is described as a research direction. Demonstration videos documen
 
 ### Institution marks
 
-Header logos are sourced from the official sites: [UIUC](https://cdn.brand.illinois.edu/icon.svg), [CMU](https://www.cmu.edu/) (header SVG), [NVIDIA](https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/nvidia-brochure/images/nvidia-logo-black.svg), and [Northeastern](https://www.northeastern.edu/) (header SVG, dark lettering for the white background). Marks remain the property of their respective institutions.
+Header logos are sourced from the official sites: [UIUC](https://cdn.brand.illinois.edu/icon.svg), [CMU](https://www.cmu.edu/) (header SVG), and [Northeastern](https://www.northeastern.edu/) (header SVG, dark lettering for the white background). Marks remain the property of their respective institutions.
